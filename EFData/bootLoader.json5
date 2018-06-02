@@ -1,0 +1,82 @@
+{
+	bootLoader: {
+		accountMode: 'LOCAL',
+	},
+	accounts: {
+		KEVIN: {
+			isActive: 'true',
+			_feature: '',
+			_loader: 'STD_LOGIN',
+			roles: 'user',
+		},
+	},
+	tutors: {
+		STD_LOGIN: {
+			path: 'Std_Login',
+			_supplSet: 'STD_LOGIN_SUPPS',
+			_moduleSet: 'STD_LOGIN_MODS',
+			xface: 'TEST_LCL',
+		},
+	},
+	supplSets: {
+		STD_LOGIN_SUPPS: {
+			_supplScripts: 'STD_LOGIN_SUPP',
+		},
+	},
+	supplScripts: {
+		STD_LOGIN_SUPP: {
+			extNameSpace: 'EFTut_Suppl',
+			intNameSpace: 'sceneExt',
+			parentFldr: 'ISP_Tutor',
+			type: 'application/javascript',
+			URL: 'EFTutors/STD_Login/EFTut_Suppl.js',
+		},
+	},
+	moduleSets: {
+		STD_LOGIN_MODS: {
+			_anModules: 'EFMOD_SIGNIN, EFMOD_SCENETEST',
+		},
+	},
+	anModules: {
+		EFMOD_SIGNIN: {
+			name: 'EFMod_SignIn',
+			parentFldr: 'ISP_Tutor',
+			type: 'application/javascript',
+			compID: 'FA5DA2CCD7B1B544A4D76BE4EAD85618',
+			URL: 'EFMod_SignIn.js',
+		},
+		EFMOD_SCENETEST: {
+			name: 'EFMod_SceneTest',
+			parentFldr: 'ISP_Tutor',
+			type: 'application/javascript',
+			compID: '7328A50A4D5549EDFB54BD165626BB3B',
+			URL: 'EFMod_SceneTest.js',
+		},
+		EFMOD_XX: {
+			name: 'EFMod_XX',
+			parentFldr: 'EF_LoaderUpdater',
+			type: 'application/javascript',
+			compID: 'B266116C1A0F250917D3D2C1038C7C4B',
+			URL: 'EFMod_XX.js',
+		},
+	},
+	features: {
+		STD_LOGIN: {
+			part: 'login',
+			features: '',
+		},
+	},
+	interfaces: {
+		TEST_LCL: {
+			demo: 'false',
+			debug: 'false',
+			log: 'REMOTE',
+			remote: 'false',
+			forcebackbutton: 'false',
+			hpcheck: true,
+			sdcheck: true,
+			fscheck: true,
+			skillometer: false,
+		},
+	},
+}
